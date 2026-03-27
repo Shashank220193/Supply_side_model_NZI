@@ -12,14 +12,16 @@
                     "RampingLimitConstraint": true,
                     "MinFlowConstraint": true,
                     "MinUpTimeConstraint": true,
-                    "MinDownTimeConstraint": true
+                    "MinDownTimeConstraint": true,
+                    "MaxCapacityConstraint": true,
+                    "MinCapacityConstraint":true
                 },
                 "ramp_up_fraction": 0.06,
                 "ramp_down_fraction": 0.06,
                 "min_flow_fraction": 0,
                 "lifetime": 20,
                 "can_retire": false,
-                "can_expand": false,
+                "can_expand": true,
                 "emission_rate": 0,
                 "fuel_consumption": 4.186799993,
                 "fixed_om_cost": 7713457,
@@ -30,27 +32,37 @@
             {
                 "id": "NR_biomass",
                 "location": "NR",
-                "existing_capacity": 3357.15
+                "existing_capacity": 3357.15,
+                "min_capacity":3500.15,
+                "max_capacity":3500.15
             },
             {
                 "id": "NER_biomass",
                 "location": "NER",
-                "existing_capacity": 15.8
+                "existing_capacity": 15.8,
+                "min_capacity":16.8,
+                "max_capacity":16.8
             },
             {
                 "id": "ER_biomass",
                 "location": "ER",
-                "existing_capacity": 560.64
+                "existing_capacity": 560.64,
+                "min_capacity":583.64,
+                "max_capacity":583.64
             },
             {
                 "id": "WR_biomass",
                 "location": "WR",
-                "existing_capacity": 3161.7
+                "existing_capacity": 3161.7,
+                "min_capacity":3297.7,
+                "max_capacity":3297.7
             },
             {
                 "id": "SR_biomass",
                 "location": "SR",
-                "existing_capacity": 3734.75
+                "existing_capacity": 3734.75,
+                "min_capacity":3894.75,
+                "max_capacity":3894.75
             }
         ]
     }
