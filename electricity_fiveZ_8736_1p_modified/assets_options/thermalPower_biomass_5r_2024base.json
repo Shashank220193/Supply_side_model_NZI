@@ -1,0 +1,62 @@
+{
+    "ThermalPowerNaturalGas": {
+        "type": "ThermalPower",
+        "global_data": {
+                "timedata": "Biomass",
+                "fuel_commodity": "Biomass",
+                "fuel_start_vertex": "biomass_source",
+                "co2_sink": "co2_sink",
+                "uc": true,
+                "elec_constraints": {
+                    "CapacityConstraint": true,
+                    "RampingLimitConstraint": true,
+                    "MinFlowConstraint": true,
+                    "MinUpTimeConstraint": true,
+                    "MinDownTimeConstraint": true
+                },
+                "startup_cost": 400,
+                "startup_fuel_consumption": 0.58614214,
+                "min_up_time": 15,
+                "min_down_time": 15,
+                "ramp_up_fraction": 0.35,
+                "ramp_down_fraction": 0.35,
+                "min_flow_fraction": 0.5,
+                "lifetime": 30,
+                "capacity_size": 400,
+                "can_retire": false,
+                "can_expand": false,
+                "emission_rate": 0.611,
+                "fuel_consumption": 4.2,
+                "fixed_om_cost": 10287,
+                "variable_om_cost": 3.55,
+                "investment_cost": 45400
+        },
+        "instance_data": [
+            {
+                "id": "NR_biomass",
+                "location": "NR",
+                "existing_capacity": 400
+            },
+            {
+                "id": "NER_biomass",
+                "location": "NER",
+                "existing_capacity": 400
+            },
+            {
+                "id": "ER_biomass",
+                "location": "ER",
+                "existing_capacity": 400
+            },
+            {
+                "id": "WR_biomass",
+                "location": "WR",
+                "existing_capacity": 400
+            },
+            {
+                "id": "SR_biomass",
+                "location": "SR",
+                "existing_capacity": 400
+            }
+        ]
+    }
+}

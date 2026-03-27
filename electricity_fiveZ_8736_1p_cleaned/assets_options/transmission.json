@@ -1,0 +1,86 @@
+{
+    "ElectricityTransmission": {
+        "type": "TransmissionLink",
+        "global_data": {
+            "commodity": "Electricity",
+            "transmission_constraints": {
+                "MaxCapacityConstraint": true
+            },
+            "lifetime": 50
+        },
+        "instance_data": [
+            {
+                "id": "NR_to_ER",
+                "commodity": "Electricity",
+                "transmission_origin": "elec_NR",
+                "transmission_dest": "elec_ER",
+                "distance": 500,
+                "existing_capacity": 6100,
+                "max_capacity": 96000,
+                "max_new_capacity": 15000,
+                "investment_cost": 12060,
+                "loss_fraction": 0.05
+            },
+            {
+                "id": "NR_to_WR",
+                "commodity": "Electricity",
+                "transmission_origin": "elec_NR",
+                "transmission_dest": "elec_WR",
+                "distance": 500,
+                "existing_capacity": 17700,
+                "max_capacity": 113000,
+                "max_new_capacity": 16000,
+                "investment_cost": 19261,
+                "loss_fraction": 0.05
+            },
+            {
+                "id": "WR_to_ER",
+                "commodity": "Electricity",
+                "transmission_origin": "elec_WR",
+                "transmission_dest": "elec_ER",
+                "distance": 500,
+                "existing_capacity": 9000,
+                "max_capacity": 61000,
+                "max_new_capacity": 9000,
+                "investment_cost": 13060,
+                "loss_fraction": 0.05
+            },
+            {
+                "id": "ER_to_NER",
+                "commodity": "Electricity",
+                "transmission_origin": "elec_ER",
+                "transmission_dest": "elec_NER",
+                "distance": 500,
+                "existing_capacity": 1520,
+                "max_capacity": 14400,
+                "max_new_capacity": 2200,
+                "investment_cost": 18060,
+                "loss_fraction": 0.05
+            },
+            {
+                "id": "WR_to_SR",
+                "commodity": "Electricity",
+                "transmission_origin": "elec_WR",
+                "transmission_dest": "elec_SR",
+                "distance": 500,
+                "existing_capacity": 7300,
+                "max_capacity": 99000,
+                "max_new_capacity": 15000,
+                "investment_cost": 15000,
+                "loss_fraction": 0.05
+            },
+            {
+                "id": "ER_to_SR",
+                "commodity": "Electricity",
+                "transmission_origin": "elec_ER",
+                "transmission_dest": "elec_SR",
+                "distance": 500,
+                "existing_capacity": 3850,
+                "max_capacity": 27000,
+                "max_new_capacity": 3800,
+                "investment_cost": 14000,
+                "loss_fraction": 0.05
+            }
+        ]
+    }
+}

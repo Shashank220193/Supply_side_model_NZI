@@ -1,0 +1,354 @@
+{
+    "nodes": [
+        {
+            "type": "Electricity",
+            "global_data": {
+                "time_interval": "Electricity",
+                "constraints": {
+                    "MaxNonServedDemandConstraint": true,
+                    "MaxNonServedDemandPerSegmentConstraint": true,
+                    "BalanceConstraint": true
+                },
+                "max_nsd": [
+                    1
+                ],
+                "price_nsd": [
+                    50000
+                ]
+            },
+            "instance_data": [
+                {
+                    "id": "elec_NR",
+                    "location": "NR",
+                    "demand": {
+                        "timeseries": {
+                            "header": "elec_demand_NR_p20_2024",
+                            "path": "system/demand.csv"
+                        }
+                    }
+                },
+                {
+                    "id": "elec_NER",
+                    "location": "NER",
+                    "demand": {
+                        "timeseries": {
+                            "header": "elec_demand_NER_p20_2024",
+                            "path": "system/demand.csv"
+                        }
+                    }
+                },
+				{
+                    "id": "elec_ER",
+                    "location": "ER",
+                    "demand": {
+                        "timeseries": {
+                            "header": "elec_demand_ER_p20_2024",
+                            "path": "system/demand.csv"
+                        }
+                    }
+                },
+                {
+                    "id": "elec_WR",
+                    "location": "WR",
+                    "demand": {
+                        "timeseries": {
+                            "header": "elec_demand_WR_p20_2024",
+                            "path": "system/demand.csv"
+                        }
+                    }
+                },
+                {
+                    "id": "elec_SR",
+                    "location": "SR",
+                    "demand": {
+                        "timeseries": {
+                            "header": "elec_demand_SR_p20_2024",
+                            "path": "system/demand.csv"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "type": "NaturalGas",
+            "global_data": {
+                "time_interval": "NaturalGas"
+            },
+            "instance_data": [
+                {
+                    "id": "NR_NG",
+                    "location": "NR",
+                    "price": {
+                        "timeseries": {
+                            "header": "NR_NG",
+                            "path": "system/fuel_prices.csv"
+                        }
+                    }
+                },
+				{
+                    "id": "NER_NG",
+                    "location": "NER",
+                    "price": {
+                        "timeseries": {
+                            "header": "NER_NG",
+                            "path": "system/fuel_prices.csv"
+                        }
+                    }
+                },
+				{
+                    "id": "ER_NG",
+                    "location": "ER",
+                    "price": {
+                        "timeseries": {
+                            "header": "ER_NG",
+                            "path": "system/fuel_prices.csv"
+                        }
+                    }
+                },
+                {
+                    "id": "WR_NG",
+                    "location": "WR",
+                    "price": {
+                        "timeseries": {
+                            "header": "WR_NG",
+                            "path": "system/fuel_prices.csv"
+                        }
+                    }
+                },
+                {
+                    "id": "SR_NG",
+                    "location": "SR",
+                    "price": {
+                        "timeseries": {
+                            "header": "SR_NG",
+                            "path": "system/fuel_prices.csv"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Coal",
+            "global_data": {
+                "time_interval": "Coal"
+            },
+            "instance_data": [
+                {
+                    "id": "coal_source",
+                    "price": [
+                        16.000
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Uranium",
+            "global_data": {
+                "time_interval": "Uranium"
+            },
+            "instance_data": [
+                {
+                    "id": "uranium_source",
+                    "price": [
+                        2.490863394
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "LiquidFuels",
+            "global_data": {
+                "time_interval": "LiquidFuels"
+            },
+            "instance_data": [
+                {
+                    "id": "diesel_source",
+                    "price": [
+                        20.1
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Biomass",
+            "global_data": {
+                "time_interval": "Biomass",
+                "constraints": {
+                    "BalanceConstraint": true
+                }
+            },
+            "instance_data": [
+                {
+                    "id": "biomass_source",
+                    "max_supply": [
+                        820.85,
+                        1202.51,
+                        1255.77,
+                        3370.4,
+                        4511.23
+                    ],
+                    "price_supply": [
+                        49.38,
+                        61.73,
+                        66.66,
+                        86.42,
+                        86.55
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Electricity",
+            "global_data": {
+                "time_interval": "Electricity"
+            },
+            "instance_data": [
+                {
+                    "id": "hydro_source"
+                }
+            ]
+        },
+        {
+            "type": "CO2",
+            "global_data": {
+                "time_interval": "CO2",                
+                "price_unmet_policy": {
+                    "CO2CapConstraint": 10000
+                },
+                "#CO2CapConstraint": "10,000$ per tonne is amount that model pays for every tCO2 over limit set in rhs_policy"
+            },
+            "instance_data": [
+                {
+                    "id": "co2_sink",
+                    "constraints": {
+                        "CO2CapConstraint": true
+                    },
+                    "rhs_policy": {
+                        "CO2CapConstraint": 100000
+                    },
+                    "#id": "name for uncontrolled CO2 emitted to air",
+                    "#CO2CapConstraint": "100,000 tpa whichmakes model pay price for every t CO2 over that limit"
+                }
+            ]
+        },
+        {
+            "type": "CO2Captured",
+            "global_data": {
+                "time_interval": "CO2Captured"
+            },
+            "instance_data": [
+                {
+                    "id": "co2_captured_NR",
+                    "location": "NR",  
+                    "constraints": {
+                        "BalanceConstraint": true
+                    },
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/demand_other.csv",
+                            "header": "Demand_Zero"
+                        }
+                    }
+                },
+                {
+                    "id": "co2_captured_NER",
+                    "location": "NER",
+                    "constraints": {
+                        "BalanceConstraint": true
+                    },
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/demand_other.csv",
+                            "header": "Demand_Zero"
+                        }
+                    }
+                },
+                {
+                    "id": "co2_captured_ER",
+                    "location": "ER",
+                    "constraints": {
+                        "BalanceConstraint": true
+                    },
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/demand_other.csv",
+                            "header": "Demand_Zero"
+                        }
+                    }
+                },
+                {
+                    "id": "co2_captured_WR",
+                    "location": "WR",
+                    "constraints": {
+                        "BalanceConstraint": true
+                    },
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/demand_other.csv",
+                            "header": "Demand_Zero"
+                        }
+                    }
+                },
+                {
+                    "id": "co2_captured_SR",
+                    "location": "SR",
+                    "constraints": {
+                        "BalanceConstraint": true
+                    },
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/demand_other.csv",
+                            "header": "Demand_Zero"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "type": "CO2Captured",
+            "global_data": {
+                "time_interval": "CO2Captured",
+                "constraints": {
+                     "CO2StorageConstraint": true
+                }
+            },
+            "instance_data": [
+                {
+                    "id": "co2_storage_NR",
+                    "rhs_policy": {
+                        "CO2StorageConstraint": 3000000000
+                    },
+                    "#CO2StorageConstraint": "tonnes, so this is 3,000,000,000 tonnes over X years = 3Bt/x years for the period"
+                },
+                {
+                    "id": "co2_storage_NER",
+                    "rhs_policy": {
+                        "CO2StorageConstraint": 3000000000
+                    },
+                    "#CO2StorageConstraint": "tonnes, so this is 3,000,000,000 tonnes over X years = 3Bt/x years for the period"
+                },
+                {
+                    "id": "co2_storage_ER",
+                    "rhs_policy": {
+                        "CO2StorageConstraint": 3000000000
+                    },
+                    "#CO2StorageConstraint": "tonnes, so this is 3,000,000,000 tonnes over X years = 3Bt/x years for the period"
+                },
+                {
+                    "id": "co2_storage_WR",
+                    "rhs_policy": {
+                        "CO2StorageConstraint": 3000000000
+                    },
+                    "#CO2StorageConstraint": "tonnes, so this is 3,000,000,000 tonnes over X years = 3Bt/x years for the period"
+                },
+                {
+                    "id": "co2_storage_SR",
+                    "rhs_policy": {
+                        "CO2StorageConstraint": 3000000000
+                    },
+                    "#CO2StorageConstraint": "tonnes, so this is 3,000,000,000 tonnes over X years = 3Bt/x years for the period"
+                }
+            ]
+        }        
+    ]
+}

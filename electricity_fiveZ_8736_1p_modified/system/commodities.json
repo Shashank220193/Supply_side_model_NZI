@@ -1,0 +1,11 @@
+{
+    "commodities": [
+        "Electricity",
+        "NaturalGas",
+        "Coal",
+        "Uranium",
+        "Biomass",
+        "CO2",
+        "CO2Captured"
+    ]
+}

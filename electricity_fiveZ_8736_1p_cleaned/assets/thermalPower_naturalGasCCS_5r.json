@@ -1,0 +1,61 @@
+{
+    "ThermalPowerNaturalGasCCS": [
+        {
+            "type": "ThermalPowerCCS",
+            "global_data": {
+                "transform_timedata": "NaturalGas",
+                "fuel_commodity": "NaturalGas",
+                "co2_sink": "co2_sink",
+                "uc": true,
+                "elec_constraints": {
+                    "CapacityConstraint": true,
+                    "RampingLimitConstraint": true,
+                    "MinFlowConstraint": true,
+                    "MinUpTimeConstraint": true,
+                    "MinDownTimeConstraint": true
+                },
+                "fuel_consumption": 2.09809579,
+                "emission_rate": 0.018104824,
+                "capture_rate": 0.162943412,
+                "existing_capacity": 0.0,
+                "fixed_om_cost": 47800,
+                "variable_om_cost": 3.76,
+                "capacity_size": 377,
+                "startup_cost": 97,
+                "startup_fuel_consumption": 0.058614214,
+                "min_up_time": 4,
+                "min_down_time": 4,
+                "ramp_up_fraction": 1,
+                "ramp_down_fraction": 1,
+                "min_flow_fraction": 0.5
+            },
+            "instance_data": [
+                {
+                    "id": "NR_natural_gas_combined_cycle_ccs",
+                    "location": "NR",
+                    "investment_cost": 105122.0711
+                },
+                {
+                    "id": "NER_natural_gas_combined_cycle_ccs",
+                    "location": "NER",
+                    "investment_cost": 111088.9792
+                },
+                {
+                    "id": "ER_natural_gas_combined_cycle_ccs",
+                    "location": "ER",
+                    "investment_cost": 121097.9862
+                },
+                {
+                    "id": "WR_natural_gas_combined_cycle_ccs",
+                    "location": "WR",
+                    "investment_cost": 101088.9792
+                },
+                {
+                    "id": "SR_natural_gas_combined_cycle_ccs",
+                    "location": "SR",
+                    "investment_cost": 101097.9862
+                }
+            ]
+        }
+    ]
+}

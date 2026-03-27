@@ -1,0 +1,54 @@
+{
+    "CO2Injection": [
+        {
+            "type": "CO2Injection",
+            "global_data":{
+                "timedata": "CO2Captured"
+            },
+            "instance_data":[
+                {
+                    "location": "NR",
+                    "id": "CO2_Injection_NR",
+                    "co2_source": "co2_captured_NR",                    
+                    "co2_storage": "co2_storage_NR",
+                    "existing_capacity": 3000000000,
+                    "variable_om_cost": 6.1
+                },
+                {
+                    "location": "NER",
+                    "id": "CO2_Injection_NER",
+                    "co2_source": "co2_captured_NER",                    
+                    "co2_storage": "co2_storage_NER",
+                    "existing_capacity": 3000000000,
+                    "variable_om_cost": 6.1
+                },
+                {
+                    "location": "ER",
+                    "id": "CO2_Injection_ER",
+                    "co2_source": "co2_captured_ER",                    
+                    "co2_storage": "co2_storage_ER",
+                    "existing_capacity": 3000000000,
+                    "variable_om_cost": 6.1
+                },
+                {
+                    "location": "WR",
+                    "id": "CO2_Injection_WR",
+                    "co2_source": "co2_captured_WR",                    
+                    "co2_storage": "co2_storage_WR",
+                    "existing_capacity": 3000000000,
+                    "variable_om_cost": 6.1
+                },
+                {
+                    "location": "SR",
+                    "id": "CO2_Injection_SR",
+                    "co2_source": "co2_captured_SR",                    
+                    "co2_storage": "co2_storage_SR",
+                    "existing_capacity": 3000000000,
+                    "variable_om_cost": 6.1
+                }
+                
+            ]
+        }
+    ]
+
+}
