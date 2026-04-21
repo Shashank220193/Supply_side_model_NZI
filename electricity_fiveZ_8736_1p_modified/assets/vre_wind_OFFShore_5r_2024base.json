@@ -8,7 +8,7 @@
                     "MaxCapacityConstraint": true
             },
             "lifetime": 25,
-            "fixed_om_cost": 34540361.67,
+            "fixed_om_cost": 5460000,
             "investment_cost": 193800000,
             "variable_om_cost": 0
         },

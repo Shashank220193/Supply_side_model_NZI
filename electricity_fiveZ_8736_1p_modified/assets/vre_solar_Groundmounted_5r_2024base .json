@@ -9,7 +9,7 @@
                     "MinCapacityConstraint":true
             },
             "lifetime": 25,
-            "fixed_om_cost": 5439705.856,
+            "fixed_om_cost": 310000,
             "investment_cost": 36200000,
             "variable_om_cost": 0
         },

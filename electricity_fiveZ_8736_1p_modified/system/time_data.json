@@ -9,6 +9,7 @@
         "CO2Captured": 1
     },
     "NumberOfSubperiods": 52,
+    
     "HoursPerSubperiod": {
         "NaturalGas": 168,
         "Electricity": 168,

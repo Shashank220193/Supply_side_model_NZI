@@ -8,7 +8,7 @@
                 
             },
             "lifetime": 50,
-            "investment_cost": 4467120455,
+            "variable_om_cost": 509.945,
             "loss_fraction": 0.035,
             "can_expand": true,
             "can_retire": false

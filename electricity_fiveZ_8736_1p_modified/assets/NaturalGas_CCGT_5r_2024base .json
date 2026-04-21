@@ -12,8 +12,8 @@
                     "CapacityConstraint": true,
                     "RampingLimitConstraint": true,
                     "MinFlowConstraint": true,
-                    "MinUpTimeConstraint": true,
-                    "MinDownTimeConstraint": true,
+                    "MinUpTimeConstraint": false,
+                    "MinDownTimeConstraint": false,
                     "MaxCapacityConstraint": true,
                     "MinCapacityConstraint":true
                 },
@@ -25,7 +25,7 @@
                 "can_expand": true,
                 "investment_cost": 34700000,
                 "emission_rate": 0.43,
-                "fixed_om_cost": 8512227.803,
+                "fixed_om_cost": 2900000,
                 "variable_om_cost": 0,
                 "fuel_consumption": 2.472538003
         },
@@ -34,7 +34,7 @@
                 "id": "NR_NG_CCGT",
                 "location": "NR",
                 "existing_capacity": 7330.5,
-                 "min_capacity":7330.5,
+               
                 "max_capacity":7330.5            
                 
             },
@@ -42,7 +42,7 @@
                 "id": "NER_NG_CCGT",
                 "location": "NER",
                 "existing_capacity":2002.4,
-                 "min_capacity":2002.4,
+                
                 "max_capacity":2002.4
                 
             },
@@ -50,7 +50,7 @@
                 "id": "ER_NG_CCGT",
                 "location": "ER",
                 "existing_capacity": 770.8,
-                 "min_capacity":770.8,
+               
                 "max_capacity":770.8
                 
             },
@@ -58,7 +58,7 @@
                 "id": "WR_NG_CCGT",
                 "location": "WR",
                 "existing_capacity": 13563.1,
-                 "min_capacity":13563.1,
+               
                 "max_capacity":13563.1
                 
             },
