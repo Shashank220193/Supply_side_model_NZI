@@ -2,7 +2,7 @@
     "AutoCreateNodes": false,
     "AutoCreateLocations": true,
     "ConstraintScaling": true,
-    "OverwriteResults": true,
+    "OverwriteResults": false,
     "OutputLayout": "long",
     "WriteSubcommodities": true
 }
