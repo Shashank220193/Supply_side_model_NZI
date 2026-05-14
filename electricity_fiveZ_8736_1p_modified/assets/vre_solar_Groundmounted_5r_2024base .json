@@ -19,8 +19,8 @@
                 "id": "NR_solar_GM",
                 "location": "NR",
                 "existing_capacity": 19996.72,
-                "min_capacity":20001.511,
-                "max_capacity":20001.511,
+                "min_capacity":24785.27,
+                "max_capacity":24785.27,
                 "availability": {
                     "timeseries": {
                         "header": "NR_solar_pv",

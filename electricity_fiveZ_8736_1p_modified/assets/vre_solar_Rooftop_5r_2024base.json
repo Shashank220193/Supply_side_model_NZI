@@ -44,9 +44,9 @@
             {
                 "id": "ER_solar_RT",
                 "location": "ER",
-                "existing_capacity": 2000,
-                "min_capacity":2138,
-                "max_capacity":2138,
+                "existing_capacity": 200.084,
+                "min_capacity":338.084,
+                "max_capacity":338.084,
                 "availability": {
                     "timeseries": {
                         "header": "ER_solar_rt",

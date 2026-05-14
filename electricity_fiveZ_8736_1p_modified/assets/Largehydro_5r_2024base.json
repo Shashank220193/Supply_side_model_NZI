@@ -3,12 +3,15 @@
         {
             "type": "HydroRes",
             "global_data": {
+                "#description": "Legacy additional infrastructure in India 2024. Source = PIER2.0 -> ECT_CapAddBounds.xlsx",
                 "hydro_source": "hydro_source",
                 "discharge_constraints": {
                     "CapacityConstraint": true,
-                    "RampingLimitConstraint": true
+                    "RampingLimitConstraint": true,
+                    "MaxCapacityConstraint": true,
+                    "MinCapacityConstraint": true
                 },
-                "discharge_can_expand": false,
+                "discharge_can_expand": true,
                 "discharge_can_retire": false,
                 "inflow_can_expand": false,
                 "inflow_can_retire": false,
@@ -16,51 +19,69 @@
                 "storage_can_retire": false,
                 "storage_long_duration": true,
                 "storage_constraints": {
-                    "MinStorageOutflowConstraint": true,
                     "StorageChargeDischargeRatioConstraint": true,
                     "BalanceConstraint": true,
                     "LongDurationStorageImplicitMinMaxConstraint": true
                 },
-                "storage_charge_discharge_ratio": 1.0,
-                "discharge_investment_cost":132564226,
-                "discharge_fixed_om_cost": 5451239.2,
-                "wacc": 0.105,
-                "discharge_ramp_down_fraction":1,
+                "#operationalParameters": "PIER2.0 --> ECT_OperationalInfo.csv & ECT_EfficiencyCostMaxAnnualUF.csv & ECT_EmissionDetails.csv ::  Fuel consumption = 1/coversion efficiency , discharge efficiency adjusts for self consumption",
+                "discharge_ramp_down_fraction": 1,
                 "discharge_ramp_up_fraction": 1,
-                "discharge_efficiency": 1.0,
-                "inflow_efficiency": 1.0
+                "discharge_efficiency": 0.994,
+                "#finance_source": "Million Rupees, Source = PIER2.0 -> ECT_EfficiencyCostMaxAnnualUF.xlsx ; PIER costs for 1 GW Capacity all, Macro in MW",
+                "#common_finance": "No Var O&M in PIER except coal ",
+                "discharge_capacity_size": 1,
+                "discharge_fixed_om_cost": 5451.237358,
+                "variable_om_cost": 0,
+                "discharge_investment_cost": 132564.18,
+                "discharge_capital_recovery_period": 40,  
+                "discharge_wacc": 0.105,  
+                "inflow_availability": {
+                    "timeseries": {
+                        "header": "EG_LH_2024_ALL",
+                        "path": "system/availability_PIER8760_5period.csv"
+                    }
+                }
             },
             "instance_data": [
                 {
                     "id": "NR_conventional_hydroelectric",
                     "location": "NR",
-                    
-                    "discharge_existing_capacity": 20527.32
+                    "discharge_existing_capacity": 0,
+                    "discharge_min_capacity":0,
+                    "discharge_max_capacity": 20527.31731
                 },
                 {
                     "id": "NER_conventional_hydroelectric",
                     "location": "NER",
-                                        
-                    "discharge_existing_capacity": 1842.825
+                    "discharge_existing_capacity": 0,
+                    "discharge_min_capacity": 0,
+                    "discharge_max_capacity": 1842.825293
                 },
                 {
                     "id": "ER_conventional_hydroelectric",
                     "location": "ER",
-                  
-                    "discharge_existing_capacity": 4198.86
+                    "discharge_existing_capacity": 0,
+                    "discharge_min_capacity": 0,
+                    "discharge_max_capacity": 4198.860286
+
                 },
                 {
                     "id": "WR_conventional_hydroelectric",
                     "location": "WR",
-                
-                    "discharge_existing_capacity": 7753.216
+                    "discharge_existing_capacity": 0,
+                    "discharge_min_capacity": 0,
+                    "discharge_max_capacity": 7753.21565
+
                 },
                 {
                     "id": "SR_conventional_hydroelectric",
                     "location": "SR",
-                  
-                    "discharge_existing_capacity": 12168.961
+                    "discharge_existing_capacity": 0,
+                    "discharge_min_capacity": 0,
+                    "discharge_max_capacity":12168.96
                 }
+                
+                
             ]
         }
     ]

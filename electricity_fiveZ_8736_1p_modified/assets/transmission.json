@@ -1,13 +1,15 @@
 {
     "ElectricityTransmission": {
-        "type": "TransmissionLink",
+        "type": "OneWayTransmissionLink",
         "global_data": {
             "commodity": "Electricity",
+             
             "transmission_constraints": {
-                "MaxCapacityConstraint": true
+                "MaxCapacityConstraint": true,
+                "MinCapacityConstraint": true
                 
             },
-            "lifetime": 50,
+            "lifetime": 25,
             "variable_om_cost": 509.945,
             "loss_fraction": 0.035,
             "can_expand": true,
@@ -15,69 +17,187 @@
         
         },
         "instance_data": [
-            {
-                "id": "NER_to_NR",
+           {
+                    "id": "NR_to_ER",
+                    "transmission_origin": "elec_NR",
+                    "transmission_dest": "elec_ER",
+                    "existing_capacity": 0,
+                    "max_capacity": 19530,
+                    "min_capacity": 19530
+                    
+                },
+                {
+                    "id": "ER_to_NR",
+                    "transmission_origin": "elec_ER",
+                    "transmission_dest": "elec_NR",
+                    "existing_capacity":0,
+                    "max_capacity": 22530,
+                    "min_capacity": 22530
+                    
+                },
+                {
+                    "id": "NR_to_WR",
+                    "transmission_origin": "elec_NR",
+                    "transmission_dest": "elec_WR",
+                    "existing_capacity": 0,
+                    "max_capacity": 36720,
+                    "min_capacity": 36720
+                    
+                },
+                {
+                    "id": "WR_to_NR",
+                    "transmission_origin": "elec_WR",
+                    "transmission_dest": "elec_NR",
+                    "existing_capacity":  0,
+                    "max_capacity": 32573,
+                    "min_capacity": 32573
+                },
+                {
+                    "id": "ER_to_NER",
+                    "transmission_origin": "elec_ER",
+                    "transmission_dest": "elec_NER",
+                    "existing_capacity": 0,
+                    "max_capacity": 2950,
+                    "min_capacity": 2950
+                                        
+                },
+                {
+                    "id": "NER_to_ER",
+                    "transmission_origin": "elec_NER",
+                    "transmission_dest": "elec_ER",
+                    "existing_capacity":  0,
+                    "max_capacity": 2950,
+                    "min_capacity": 2950
+                    
+                },
+                {
+                    "id": "WR_to_ER",
+                    "transmission_origin": "elec_WR",
+                    "transmission_dest": "elec_ER",
+                    "existing_capacity": 0,
+                    "max_capacity": 21190,
+                    "min_capacity": 21190
+                                       
+                },
+                {
+                    "id": "ER_to_WR",
+                    "transmission_origin": "elec_ER",
+                    "transmission_dest": "elec_WR",
+                    "existing_capacity": 0,
+                    "max_capacity": 21190,
+                    "min_capacity": 21190
+                    
+                    
+                },
+                {
+                    "id": "WR_to_SR",
+                    "transmission_origin": "elec_WR",
+                    "transmission_dest": "elec_SR",
+                    "existing_capacity": 0,
+                    "max_capacity": 22320,
+                    "min_capacity": 22320
+                    
+                    
+                },
+                {
+                    "id": "SR_to_WR",
+                    "transmission_origin": "elec_SR",
+                    "transmission_dest": "elec_WR",
+                    "existing_capacity": 0,
+                     "max_capacity": 19939,
+                    "min_capacity": 19939                   
+                },
+                {
+                    "id": "ER_to_SR",
+                    "transmission_origin": "elec_ER",
+                    "transmission_dest": "elec_SR",
+                    "existing_capacity":  0,
+                    "max_capacity": 7830,
+                    "min_capacity": 7830
+                                        
+                },
+                {
+                    "id": "SR_to_ER",
+                    "transmission_origin": "elec_SR",
+                    "transmission_dest": "elec_ER",
+                    "existing_capacity": 0,
+                    "max_capacity": 5830,
+                    "min_capacity": 5830
+                                        
+                },
+                {
+                    "id": "NR_to_NER",
+                    "transmission_origin": "elec_NR",
+                    "transmission_dest": "elec_NER",
+                    "existing_capacity": 0,
+                    "max_capacity": 1500,
+                    "min_capacity": 1500
+                                        
+                },
+                {
+                    "id": "NER_to_NR",
+                    "transmission_origin": "elec_NER",
+                    "transmission_dest": "elec_NR",
+                    "existing_capacity": 0,
+                    "max_capacity": 3000,
+                    "min_capacity": 3000
+                                  
+                }
+    ]
+  },
+
+                "DistributionNetwork": {
+                "type": "OneWayTransmissionLink",
+                "global_data": {
                 "commodity": "Electricity",
-                "transmission_origin": "elec_NER",
-                "transmission_dest": "elec_NR",
-                "existing_capacity": 3000,
-                "max_capacity": 4280
-                
+                "lifetime": 25,
+                "can_retire": false,
+                "can_expand": true
+                },
+                "instance_data": [
+             {
+                "id": "NR_distribution",
+                "transmission_origin": "elec_NR",
+                "transmission_dest": "load_NR",
+                "distance": 500,
+                "loss_fraction": 0.149306323,
+                "variable_om_cost": 2624.829832
+
+             },
+            {
+               "id": "NER_distribution",
+               "transmission_origin": "elec_NER",
+               "transmission_dest": "load_NER",
+               "distance": 500,
+               "loss_fraction": 0.151544675,
+               "variable_om_cost": 4646.125085
+
             },
             {
-                "id": "ER_to_NER",
-                "commodity": "Electricity",
-                "transmission_origin": "elec_ER",
-                "transmission_dest": "elec_NER",
-                "existing_capacity": 2950,
-                "max_capacity": 5060
-                
+               "id": "ER_distribution",
+               "transmission_origin": "elec_ER",
+               "transmission_dest": "load_ER",
+               "distance": 500,
+               "loss_fraction": 0.17367141,
+               "variable_om_cost": 1827.294889
+
             },
             {
-                "id": "WR_to_SR",
-                "commodity": "Electricity",
-                "transmission_origin": "elec_WR",
-                "transmission_dest": "elec_SR",
-                "existing_capacity": 22320,
-                "max_capacity":57580
-                
+               "id": "WR_distribution",
+               "transmission_origin": "elec_WR",
+               "transmission_dest": "load_WR",
+               "distance": 500,
+               "loss_fraction": 0.122581557,
+               "variable_om_cost": 1878.362789
             },
             {
-                "id": "ER_to_SR",
-                "commodity": "Electricity",
-                "transmission_origin": "elec_ER",
-                "transmission_dest": "elec_SR",
-                "existing_capacity":7830,
-                "max_capacity": 8850
-                
-            },
-            {
-                "id": "ER_to_WR",
-                "commodity": "Electricity",
-                "transmission_origin": "elec_ER",
-                "transmission_dest": "elec_WR",
-                "existing_capacity":21190,
-                "max_capacity": 32520
-                
-            },
-            {
-                "id": "ER_to_NR",
-                "commodity": "Electricity",
-                "transmission_origin": "elec_ER",
-                "transmission_dest": "elec_NR",
-                "existing_capacity":22530,
-                "max_capacity": 32150
-                
-            },
-            {
-                "id": "WR_to_NR",
-                "commodity": "Electricity",
-                "transmission_origin": "elec_WR",
-                "transmission_dest": "elec_NR",
-                "existing_capacity":36720,
-                "max_capacity": 60130
-                
-            }
-        ]
-    }
+               "id": "SR_distribution",
+               "transmission_origin": "elec_SR",
+               "transmission_dest": "load_SR",
+               "distance": 500,
+               "loss_fraction": 0.106457711,
+               "variable_om_cost": 2836.118252
+           }
+    ]
+  }
 }

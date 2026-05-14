@@ -56,9 +56,9 @@
             {
                 "id": "WR_onshore_wind",
                 "location": "WR",
-                "existing_capacity": 18661,
-                "min_capacity":18662.939,
-                "max_capacity": 18662.939,
+                "existing_capacity": 18661.04,
+                "min_capacity":20600.04,
+                "max_capacity": 20600.04,
                 "availability": {
                     "timeseries": {
                         "header": "WR_onshore_wind",
